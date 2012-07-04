@@ -1,0 +1,16 @@
+\.git/
+.gitignore
+.DS_Store
+MongoDB-.*/
+MongoDB.bs
+blib/
+debian/
+mk/
+Makefile$
+pm_to_blib
+t/test-\d+/
+.*\.(o)
+xs/.*\.c
+.*\.tar\.gz$
+.*\.bak
+MANIFEST.SKIP
