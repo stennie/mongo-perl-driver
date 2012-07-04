@@ -10,6 +10,10 @@ author 'Kristina Chodorow <kristina@10gen.com>';
 license 'Apache';
 all_from 'lib/MongoDB.pm';
 
+homepage 'http://www.mongodb.org/display/DOCS/Perl+Language+Center';
+repository 'git://github.com/mongodb/mongo-perl-driver.git';
+bugtracker 'https://jira.mongodb.org/browse/PERL';
+
 foreach (@ARGV){
     next unless($_ eq '--ssl');
     cc_lib_links('ssl', 'crypto');
@@ -42,9 +46,6 @@ test_requires 'Try::Tiny';
 mongo;
 
 no_index directory => 'ext';
-
-repository 'git://github.com/mongodb/mongo-perl-driver.git';
-
 
 if ($Config::Config{useithreads}) {
     tests 't/*.t t/threads/*.t';
