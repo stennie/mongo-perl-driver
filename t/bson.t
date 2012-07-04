@@ -239,8 +239,13 @@ package main;
     $c->drop;
 
     my $var = 'zzz';
-    # don't actually change it to an int, but add pIOK flag
-    $var = int($var) if (int($var) eq $var);
+    {
+        # Suppress expected warning: Argument "zzz" isn't numeric in int
+        no warnings 'numeric';
+
+        # don't actually change it to an int, but add pIOK flag
+        $var = int($var) if (int($var) eq $var);
+    }
 
     $c->insert({'key' => $var});
     my $v = $c->find_one;
@@ -256,8 +261,13 @@ package main;
     # PVMG (NV is 11.5)
     my $size = Person->new( size => 11.5 )->size;
 
-    # add pIOK flag (IV is 11)
-    int($size);
+    {
+        # Suppress expected warning: useless use of int in void context 
+        no warnings 'void';
+
+        # add pIOK flag (IV is 11)
+        int($size);
+    }
 
     $c->insert({'key' => $size});
     my $v = $c->find_one;
