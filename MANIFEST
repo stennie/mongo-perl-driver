@@ -12,6 +12,7 @@ inc/Module/Install/WriteAll.pm
 INSTALL
 lib/MongoDB.pm
 lib/MongoDB/BSON.pm
+lib/MongoDB/BSON/Binary.pm
 lib/MongoDB/Code.pm
 lib/MongoDB/Collection.pm
 lib/MongoDB/Connection.pm
@@ -30,10 +31,13 @@ MANIFEST			This list of files
 META.yml
 mongo_link.c
 mongo_link.h
+MYMETA.json
+MYMETA.yml
 perl_mongo.c
 perl_mongo.h
 ppport.h
 README
+t/00-load.t
 t/auth.pl
 t/bson.t
 t/collection.t
@@ -44,11 +48,15 @@ t/db.t
 t/gridfs.t
 t/img.png
 t/input.txt
+t/manifest.t
 t/memtest.pl
 t/paired.pl
+t/pod-coverage.t
+t/pod.t
 t/rs.pl
 t/threads/basic.t
 t/threads/cursor.t
+t/threads/oid.t
 t/types.t
 xs/BSON.xs
 xs/Connection.xs
