@@ -24,6 +24,20 @@ use Any::Moose;
 
 MongoDB::BSON - Encoding and decoding utilities (more to come)
 
+=head1 FUNCTIONS
+
+=head2 decode_bson ($buffer)
+
+   my @bson = MongoDB::BSON::decode_bson($buffer);
+
+Decodes BSON documents from the given $buffer.
+
+=head2 encode_bson ($object)
+
+   my $buffer = MongoDB::BSON::encode_bson($object);
+
+Serialises given $object as BSON.
+
 =head1 ATTRIBUTES
 
 =head2 C<looks_like_number>
