@@ -15,7 +15,7 @@
 #
 
 package MongoDB::BSON::Binary;
-our $VERSION = '0.45';
+our $VERSION = '0.46';
 
 # ABSTRACT: Binary type
 
